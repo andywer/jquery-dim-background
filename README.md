@@ -49,4 +49,10 @@ You can also provide a callback function that is called when the animation compl
 ```
 
 
+Demo
+----
+
+Have a look at a [basic example](http://andywer.github.io/jquery-dim-background/demo/basic.html) that shows what this plugin does.
+
+
 Have a lot of fun!
