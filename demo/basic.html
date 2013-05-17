@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic element dimming demo</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/andywer/jquery-dim-background/master/jquery.dim-background.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#actionBox')
+                .mouseenter(function() {
+                    $(this).dimBackground();
+                })
+                .mouseleave(function() {
+                    $(this).undim();        // Note: We could also use `$.undim();`
+                });
+            });
+        </script>
+        <style type="text/css">
+            html {
+                font: 10pt Arial, sans-serif;
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            h1 {
+                text-align: center;
+            }
+            
+            .box {
+                display: inline-block;
+                width: 20%;
+                margin: 4% 6.4%;
+                background: rgb(255, 255, 200);
+                border: 1px solid #888;
+                cursor: default;
+                text-align: center;
+                vertical-align: middle;
+            }
+            
+            #actionBox {
+                position: absolute;
+            }
+            #actionBox:hover {
+                box-shadow: 0 0 8pt #111;
+                -moz-transition: box-shadow 200ms;
+                -webkit-transition: box-shadow 200ms;
+                transition: box-shadow 200ms;
+            }
+            
+            #placeHolder {
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Basic Demo</h1>
+        
+        <div class="box">
+            <h2>Box #1</h2>
+        </div>
+        <div class="box">
+            <h2>Box #2</h2>
+        </div>
+        <div class="box">
+            <h2>Box #3</h2>
+        </div>
+        <div class="box">
+            <h2>Box #4</h2>
+        </div>
+        
+        <div class="box" id="actionBox">
+            <h2>Box #5</h2>
+            <p>
+                Hover me!
+            </p>
+        </div>
+        <div class="box" id="placeHolder"></div>
+        <div class="box">
+            <h2>Box #6</h2>
+        </div>
+        
+        <div class="box">
+            <h2>Box #7</h2>
+        </div>
+        <div class="box">
+            <h2>Box #8</h2>
+        </div>
+        <div class="box">
+            <h2>Box #9</h2>
+        </div>
+    </body>
+</html>
