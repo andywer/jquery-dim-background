@@ -10,7 +10,7 @@ Usage
 Include the script in your website first. Add this script tag after your jQuery inclusion.
 
 ```html
-<script type="text/javascript" src="https://raw.github.com/andywer/jquery-dim-background/master/lib/jquery.dim-background.js"></script>
+<script type="text/javascript" src="https://raw.github.com/andywer/jquery-dim-background/master/jquery.dim-background.js"></script>
 ```
 
 
