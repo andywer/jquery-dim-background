@@ -18,7 +18,7 @@ Usage is simple. You can dim your website, but keep some elements on top of the 
 
 ```html
 <script type="text/javascript">
-    $('.myElements').dim();
+    $('.myElements').dimBackground();
 </script>
 ```
 
@@ -40,7 +40,7 @@ You can also provide a callback function that is called when the animation compl
 
 ```html
 <script type="text/javascript">
-    $('.myElements').dim({
+    $('.myElements').dimBackground({
         darkness : 0.8            // 0: no dimming, 1: completely black
     }, function() {
         // do something
