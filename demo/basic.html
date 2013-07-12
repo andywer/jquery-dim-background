@@ -21,22 +21,41 @@
             }
             
             body {
-                margin: 0;
-                padding: 0;
+                display: block;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 0 0 20px;
                 
                 /* Background texture from http://subtlepatterns.com */
                 background: url('cream_pixels/cream_pixels.png') repeat;
             }
             
             h1 {
-                margin: 50px auto;
+                margin: 30px auto 10px;
                 text-align: center;
+            }
+            
+            .info {
+                margin: 15px 3.9%;
+                padding: 0;
+                background: #888;
+                border: 1px solid #AAA;
+                color: white;
+            }
+            
+            .info > p {
+                padding: 15px 20px 0;
+                margin: 0;
+                font-size: 110%;
+            }
+            
+            .info > .source {
+                margin-top: 20px;
             }
             
             .boxes {
                 position: relative;
-                margin: 30px auto;
-                max-width: 900px;
+                margin: 20px auto 30px;
             }
             
             .box {
@@ -102,6 +121,27 @@
             <div class="box">
                 <h2>Box #9</h2>
             </div>
+        </div>
+        
+        <div class="info">
+            <p>
+                Move your mouse cursor over Box #5 and see how anything else on
+                this page becomes dimmed.
+            </p>
+            <p>
+                This is the complete Javascript source code:
+            </p>
+            <pre class="source">
+            $(function() {
+                $('#actionBox')
+                .mouseenter(function() {
+                    $(this).dimBackground();
+                })
+                .mouseleave(function() {
+                    $(this).undim();        // Note: We could also use `$.undim();`
+                });
+            });
+            </pre>
         </div>
     </body>
 </html>
