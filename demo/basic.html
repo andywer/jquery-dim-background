@@ -23,16 +23,24 @@
             body {
                 margin: 0;
                 padding: 0;
+                background: url('cream_pixels/cream_pixels.png') repeat;
             }
             
             h1 {
+                margin: 50px auto;
                 text-align: center;
+            }
+            
+            .boxes {
+                position: relative;
+                margin: 30px auto;
+                max-width: 900px;
             }
             
             .box {
                 display: inline-block;
-                width: 20%;
-                margin: 4% 6.4%;
+                width: 25%;
+                margin: 3% 3.9%;
                 background: rgb(255, 255, 200);
                 border: 1px solid #888;
                 cursor: default;
@@ -58,38 +66,40 @@
     <body>
         <h1>Basic Demo</h1>
         
-        <div class="box">
-            <h2>Box #1</h2>
-        </div>
-        <div class="box">
-            <h2>Box #2</h2>
-        </div>
-        <div class="box">
-            <h2>Box #3</h2>
-        </div>
-        <div class="box">
-            <h2>Box #4</h2>
-        </div>
-        
-        <div class="box" id="actionBox">
-            <h2>Box #5</h2>
-            <p>
-                Hover me!
-            </p>
-        </div>
-        <div class="box" id="placeHolder"></div>
-        <div class="box">
-            <h2>Box #6</h2>
-        </div>
-        
-        <div class="box">
-            <h2>Box #7</h2>
-        </div>
-        <div class="box">
-            <h2>Box #8</h2>
-        </div>
-        <div class="box">
-            <h2>Box #9</h2>
+        <div class="boxes">
+            <div class="box">
+                <h2>Box #1</h2>
+            </div>
+            <div class="box">
+                <h2>Box #2</h2>
+            </div>
+            <div class="box">
+                <h2>Box #3</h2>
+            </div>
+            <div class="box">
+                <h2>Box #4</h2>
+            </div>
+            
+            <div class="box" id="actionBox">
+                <h2>Box #5</h2>
+                <p>
+                    Hover me!
+                </p>
+            </div>
+            <div class="box" id="placeHolder"></div>
+            <div class="box">
+                <h2>Box #6</h2>
+            </div>
+            
+            <div class="box">
+                <h2>Box #7</h2>
+            </div>
+            <div class="box">
+                <h2>Box #8</h2>
+            </div>
+            <div class="box">
+                <h2>Box #9</h2>
+            </div>
         </div>
     </body>
 </html>
