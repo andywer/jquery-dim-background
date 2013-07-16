@@ -55,4 +55,9 @@ Demo
 Have a look at a [basic example](http://andywer.github.io/jquery-dim-background/demo/basic.html) that shows what this plugin does.
 
 
+License
+-------
+
+This plugin is published under the MIT license. See [license](https://raw.github.com/andywer/jquery-dim-background/master/LICENSE.txt).
+
 Have a lot of fun!
