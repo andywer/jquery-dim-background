@@ -1,6 +1,6 @@
 {
   "name":       "dim-background",
-  "version":    "1.0.0",
+  "version":    "1.0.1",
   "title":      "jQuery Element Background Dimming",
   "description":"This lightweight plugin that allows you to dim (darken) all the website but one or more user-selected elements (position absolute or fixed). A frequently used eye candy for every web application.",
   "author": {
