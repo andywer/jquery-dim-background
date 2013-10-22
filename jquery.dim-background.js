@@ -1,10 +1,6 @@
 /**
  *  Usage: $("<selector>").dimBackground([options] [, callback]);
  *  
- *  Note:  Elements that stay undimmed should have CSS property `position` set
- *         to `absolute` or `static`. Otherwise there might occur positioning
- *         issues when dimming takes place.
- *  
  *  @author Andy Wermke <andy@dev.next-step-software.com>
  *
  */
@@ -47,7 +43,7 @@
             this._$curtain = $curtain;
             this._originalPosition = $this.css('position').toLowerCase();
             if(this._originalPosition != "absolute" && this._originalPosition != "fixed") {
-                $this.css('position', 'absolute');
+                $this.css('position', 'relative');
             }
             
             this._originalZIndex = $this.css('z-index');

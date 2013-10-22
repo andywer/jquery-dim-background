@@ -48,10 +48,6 @@ You can also provide a callback function that is called when the animation compl
 </script>
 ```
 
-__Important:__
-
-Remember that the elements you want to be on top of the curtain must have `position: absolute` or `position: fixed` set.
-
 Demo
 ----
 
