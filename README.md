@@ -10,7 +10,7 @@ Usage
 Include the script in your website first. Add this script tag after your jQuery inclusion.
 
 ```html
-<script type="text/javascript" src="https://raw.github.com/andywer/jquery-dim-background/master/jquery.dim-background.js"></script>
+<script type="text/javascript" src="https://raw.github.com/andywer/jquery-dim-background/master/jquery.dim-background.min.js"></script>
 ```
 
 
@@ -48,11 +48,19 @@ You can also provide a callback function that is called when the animation compl
 </script>
 ```
 
+__Important:__
+
+Remember that the elements you want to be on top of the curtain must have `position: absolute` or `position: fixed` set.
 
 Demo
 ----
 
 Have a look at a [basic example](http://andywer.github.io/jquery-dim-background/demo/basic.html) that shows what this plugin does.
 
+
+License
+-------
+
+This plugin is published under the MIT license. See [license](https://raw.github.com/andywer/jquery-dim-background/master/LICENSE.txt).
 
 Have a lot of fun!
