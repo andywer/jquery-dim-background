@@ -10,7 +10,7 @@ Usage
 Include the script in your website first. Add this script tag after your jQuery inclusion.
 
 ```html
-<script type="text/javascript" src="https://raw.github.com/andywer/jquery-dim-background/master/jquery.dim-background.min.js"></script>
+<script type="text/javascript" src="http://andywer.github.io/jquery-dim-background/jquery.dim-background.min.js"></script>
 ```
 
 
@@ -47,10 +47,6 @@ You can also provide a callback function that is called when the animation compl
     });
 </script>
 ```
-
-__Important:__
-
-Remember that the elements you want to be on top of the curtain must have `position: absolute` or `position: fixed` set.
 
 Demo
 ----
