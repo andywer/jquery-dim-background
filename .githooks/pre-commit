@@ -1,4 +1,5 @@
 #!/bin/sh
 cd `dirname "$0"`/../..
 grunt
+sleep 1s            # wait 1s so you can have a look at grunt's output
 git add *.min.js
