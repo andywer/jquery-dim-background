@@ -1,7 +1,13 @@
 {
   "name": "jquery-dim-background",
   "version": "1.2.0",
-  "keywords": ["jquery", "background", "dim", "darken", "curtain"],
+  "keywords": [
+    "jquery",
+    "background",
+    "dim",
+    "darken",
+    "curtain"
+  ],
   "description": "This lightweight plugin allows you to dim (darken) all the website but one or more user-selected elements. A frequently used eye candy for every web application.",
   "author": "Andy Wermke <andy@dev.next-step-software.com>",
   "license": "MIT",
@@ -17,6 +23,11 @@
     "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-watch": "~0.5.3",
+    "husky": "^0.4.3"
+  },
+  "scripts": {
+    "grunt": "./node_modules/.bin/grunt",
+    "precommit": "npm run grunt && sleep 1s && git add *.min.js"
   }
 }
