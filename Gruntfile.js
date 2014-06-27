@@ -13,7 +13,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     shell: {
       'bower-install': {
-        command: 'bower install'
+        command: './node_modules/bower/bin/bower install'
       }
     },
     jasmine: {
