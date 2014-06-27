@@ -128,7 +128,7 @@
    */
   $.undim = function (callback) {
     callback = typeof callback == "function" ? callback : function () {};
-    _dimmedNodes = dimmedNodes.slice();
+    var _dimmedNodes = dimmedNodes.slice();
 
     var completed = 0, total = _dimmedNodes.length;
     for (var i=0; i<dimmedNodes.length; i++) {
