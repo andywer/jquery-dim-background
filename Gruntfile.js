@@ -4,10 +4,12 @@ module.exports = function (grunt) {
 
   var fs = require('fs');
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-shell');
 
   grunt.initConfig({
@@ -51,6 +53,21 @@ module.exports = function (grunt) {
         files: ['jquery.dim-background.js'],
         tasks: ['uglify']
       }
+    },
+
+    // github pages deployment:
+    copy: {
+      public: {
+        files: [
+          { expand: true, src: ['jquery.dim-background.js', 'jquery.dim-background.min.js', 'demo/**'], dest: 'public/' }
+        ]
+      }
+    },
+    'gh-pages': {
+      options: {
+        base: 'public'
+      },
+      src: ['**']
     }
   });
 
@@ -78,6 +95,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', ['shell:bower-install', 'jasmine']);
+  grunt.registerTask('deploy', ['uglify', 'copy:public', 'gh-pages']);
   grunt.registerTask('default', ['jshint', 'uglify', 'test', 'check-version']);
 
 };

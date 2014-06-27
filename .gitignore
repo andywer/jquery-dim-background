@@ -1,2 +1,4 @@
+.grunt
 bower_components
 node_modules
+public
