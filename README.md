@@ -1,4 +1,4 @@
-jquery-dim-background
+jquery-dim-background [![Bower version](https://badge.fury.io/bo/jquery-dim-background.svg)](http://badge.fury.io/bo/jquery-dim-background)
 =====================
 
 jQuery plugin to dim the current page except for some user-defined top elements.
