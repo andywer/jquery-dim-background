@@ -8,8 +8,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.initConfig({
+    shell: {
+      'bower-install': {
+        command: 'bower install'
+      }
+    },
     jasmine: {
       test: {
         src: 'jquery.dim-background.js',
@@ -71,7 +77,7 @@ module.exports = function (grunt) {
     return errors === 0;
   });
 
-  grunt.registerTask('test', ['jasmine']);
+  grunt.registerTask('test', ['shell:bower-install', 'jasmine']);
   grunt.registerTask('default', ['jshint', 'uglify', 'test', 'check-version']);
 
 };
