@@ -4,11 +4,24 @@ module.exports = function (grunt) {
 
   var fs = require('fs');
 
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
+    jasmine: {
+      test: {
+        src: 'jquery.dim-background.js',
+        options: {
+          vendor: [
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/jasmine-jquery/lib/jasmine-jquery.js'
+          ],
+          specs: 'specs/*.spec.js'
+        }
+      }
+    },
     jshint: {
       plugin: ['jquery.dim-background.js'],
       grunt: {
@@ -58,6 +71,7 @@ module.exports = function (grunt) {
     return errors === 0;
   });
 
-  grunt.registerTask('default', ['jshint', 'uglify', 'check-version']);
+  grunt.registerTask('test', ['jasmine']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'test', 'check-version']);
 
 };
