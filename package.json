@@ -30,6 +30,7 @@
   },
   "scripts": {
     "grunt": "./node_modules/.bin/grunt",
-    "precommit": "npm run grunt && sleep 1s && git add *.min.js"
+    "precommit": "npm run grunt && sleep 1s && git add *.min.js",
+    "test": "./node_modules/.bin/grunt test"
   }
 }
