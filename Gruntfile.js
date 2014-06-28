@@ -4,13 +4,7 @@ module.exports = function (grunt) {
 
   var fs = require('fs');
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.loadNpmTasks('grunt-shell');
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     shell: {
@@ -68,7 +62,9 @@ module.exports = function (grunt) {
         base: 'public'
       },
       src: ['**']
-    }
+    },
+
+    clean: ['.grunt/', 'public/']
   });
 
   grunt.registerTask('check-version', 'Checks that the version is the same in all manifest files.', function () {
