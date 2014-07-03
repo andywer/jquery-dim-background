@@ -1,5 +1,6 @@
-jquery-dim-background [![Build Status](https://travis-ci.org/andywer/jquery-dim-background.svg?branch=master)](https://travis-ci.org/andywer/jquery-dim-background) [![Bower version](https://badge.fury.io/bo/jquery-dim-background.svg)](http://badge.fury.io/bo/jquery-dim-background)
+jquery-dim-background
 =====================
+[![Build Status](https://travis-ci.org/andywer/jquery-dim-background.svg?branch=master)](https://travis-ci.org/andywer/jquery-dim-background) [![Coverage Status](https://img.shields.io/coveralls/andywer/jquery-dim-background.svg)](https://coveralls.io/r/andywer/jquery-dim-background?branch=master) [![Bower version](https://badge.fury.io/bo/jquery-dim-background.svg)](http://badge.fury.io/bo/jquery-dim-background)
 
 jQuery plugin to dim the current page except for some user-defined top elements.
 
