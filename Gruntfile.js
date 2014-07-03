@@ -4,7 +4,9 @@ module.exports = function (grunt) {
 
   var fs = require('fs');
 
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt, {
+    pattern: ['grunt-*', '!grunt-template-jasmine-istanbul']
+  });
 
   grunt.initConfig({
     shell: {
@@ -20,7 +22,17 @@ module.exports = function (grunt) {
             'bower_components/jquery/dist/jquery.js',
             'bower_components/jasmine-jquery/lib/jasmine-jquery.js'
           ],
-          specs: 'specs/*.spec.js'
+          specs: 'specs/*.spec.js',
+          template : require('grunt-template-jasmine-istanbul'),
+          templateOptions: {
+            coverage: 'reports/coverage.json',
+            report: {
+              type: 'lcov',
+              options: {
+                dir: 'reports/coverage'
+              }
+            }
+          }
         }
       }
     },
