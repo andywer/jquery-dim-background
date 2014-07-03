@@ -36,6 +36,12 @@ module.exports = function (grunt) {
         }
       }
     },
+    coveralls: {
+      js: {
+        src: 'reports/coverage/lcov.info',
+        force: true
+      }
+    },
     jshint: {
       plugin: ['jquery.dim-background.js'],
       grunt: {
@@ -103,6 +109,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', ['shell:bower-install', 'jasmine']);
+  grunt.registerTask('ci', ['test', 'coveralls']);
   grunt.registerTask('deploy', ['uglify', 'copy:public', 'gh-pages']);
   grunt.registerTask('default', ['jshint', 'uglify', 'test', 'check-version']);
 
