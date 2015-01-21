@@ -123,16 +123,22 @@
 
   /**
    *  Undim all dimmed elements.
+   *  @param options
+   *    Optional. See `$.fn.dimBackground.defaults`.
    *  @param callback
    *    Optional. Called when all animations have completed.
    */
-  $.undim = function (callback) {
-    callback = typeof callback == "function" ? callback : function () {};
+  $.undim = function (options, callback) {
+      var params = parseParams(options, callback);
+      options = params.options;
+      callback = params.callback;
+      options = $.extend({}, $.fn.dimBackground.defaults, options);
+   
     var _dimmedNodes = dimmedNodes.slice();
 
     var completed = 0, total = _dimmedNodes.length;
     for (var i=0; i<dimmedNodes.length; i++) {
-      _dimmedNodes[i].$nodes.undim(done);
+      _dimmedNodes[i].$nodes.undim(options,done);
     }
 
     if (total === 0) {
