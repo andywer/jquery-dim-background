@@ -11,6 +11,7 @@
   "description": "This lightweight plugin allows you to dim (darken) all the website but one or more user-selected elements. A frequently used eye candy for every web application.",
   "author": "Andy Wermke <andy@dev.next-step-software.com>",
   "license": "MIT",
+  "main": "jquery.dim-background.js",
   "bugs": {
     "url": "https://github.com/andywer/jquery-dim-background/issues"
   },
