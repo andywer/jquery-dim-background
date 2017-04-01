@@ -31,7 +31,7 @@
       top:    0,
       width:    '100%',
       height:   '100%',
-      background: 'black',
+      background: options.background,
       opacity:  0,
       zIndex:   options.curtainZIndex
     });
@@ -158,7 +158,8 @@
     darkness    : 0.75,   // 0 means no dimming, 1 means completely dark
     fadeInDuration  : 300,    // in ms
     fadeOutDuration : 300,    // in ms
-    curtainZIndex   : 999
+    curtainZIndex   : 999,
+    background      : 'black'
   };
 
   /// @return {options:object, callback:function}
